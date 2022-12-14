@@ -3,3 +3,4 @@ exec: /bin/sh -c "
   redis-cli --raw SUBSCRIBE zlog
   "
 test: bin/sh -c "redis-cli --raw PING"
+log: stdout
