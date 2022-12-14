@@ -1,0 +1,5 @@
+exec: /bin/sh -c "
+  redis-server --daemonize yes;
+  redis-cli --raw SUBSCRIBE zlog
+  "
+test: bin/sh -c "redis-cli --raw PING"
