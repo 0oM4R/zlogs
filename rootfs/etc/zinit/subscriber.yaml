@@ -1,0 +1,5 @@
+exec: bin/sh -c "python3 /listener.py"
+test: bin/sh -c "pgrep python3"
+after: 
+- redis
+log: stdout
