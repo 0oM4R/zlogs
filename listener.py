@@ -2,7 +2,7 @@ import os
 import redis
 import gzip
 import json
-
+from datetime import datetime
 redis_conn = redis.Redis(charset="utf-8", decode_responses=False)
 from multiprocessing import Process
 
@@ -16,6 +16,7 @@ def sub(name: str):
             data = message.get("data")
             decompressedData =gzip.decompress(data).decode('utf-8')
             f = open("/output.txt", "a")
+            f.write("\n ---------------------"+current_time.strftime("%d/%m/%Y %H:%M:%S")+"------------------------\n")
             f.write(decompressedData)
             f.close()
 
