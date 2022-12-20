@@ -15,7 +15,8 @@ def sub(name: str):
          if message.get("type") == "message":
             data = message.get("data")
             decompressedData =gzip.decompress(data).decode('utf-8')
-            f = open("/output.txt", "a")
+            f = open("/zlogOutput.txt", "a")
+            current_time=datetime.now()
             f.write("\n ---------------------"+current_time.strftime("%d/%m/%Y %H:%M:%S")+"------------------------\n")
             f.write(decompressedData)
             f.close()
