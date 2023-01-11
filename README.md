@@ -1,7 +1,7 @@
 # zlogs
 This repo is an example of how to use [zlogs](https://github.com/threefoldtech/zos/tree/main/docs/manual/zlogs) with `Redis`, and we will use python to extract the messages.
 ## Docker 
-The [dockerFile](https://github.com/0oM4R/zlogs/blob/master/Dockerfile) contains the Redis, zinit, ssh, and the listener.py It is ready to use, and flist also provided below, so feel free to jump to Instance section
+The [dockerFile](https://github.com/0oM4R/zlogs/blob/master/Dockerfile) contains the Redis, zinit, ssh, and the listener.py It is ready to use, and flist also provided below, you only need to config the instance with redis url as in [grid3_javascript_zlog](https://github.com/threefoldfoundation/info_manual3/blob/development/wiki/manual3_iac/grid3_javascript/grid3_javascript_zlog.md)
 ## flist
 You will find the flist of the docker image ready on [Zero-OS Hub](https://hub.grid.tf/kassem.3bot/0om4r-zlogs-latest.flist.md)
 
